@@ -2,7 +2,10 @@ import matplotlib.pyplot as plt
 
 def generate_bar_chart(name, labels, values):
   fig, ax = plt.subplots()
-  ax.bar(labels, values)
+  ax.bar(labels,values)
+  ax.set_title(f'{name} population trough the years')
+  ax.set_xlabel('years')
+  ax.set_ylabel('population')
   plt.savefig(f'./imgs/{name}.png')
   plt.close()
 
